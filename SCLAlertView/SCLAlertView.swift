@@ -351,7 +351,7 @@ open class SCLAlertView: UIViewController {
         view.frame.size = sz
 
         let hMargin: CGFloat = 12
-        let defaultTopOffset: CGFloat = 32
+        let defaultTopOffset: CGFloat = 12
 
         // get actual height of title text
         var titleActualHeight: CGFloat = 0
@@ -399,7 +399,7 @@ open class SCLAlertView: UIViewController {
         let windowHeight = consumedHeight + viewTextHeight
         // Set frames
         var x = (sz.width - appearance.kWindowWidth) / 2
-        var y = (sz.height - windowHeight - (appearance.kCircleHeight / 8)) / 2
+        var y = (sz.height - windowHeight - (appearance.kCircleHeight / 8)) / 2 - (windowHeight/2)
         contentView.frame = CGRect(x:x, y:y, width:appearance.kWindowWidth, height:windowHeight)
         contentView.layer.cornerRadius = appearance.contentViewCornerRadius
         y -= kCircleHeightBackground * 0.6
